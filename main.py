@@ -20,7 +20,7 @@ VINTED_SEARCHES = [
     {"name": "Off-White Pull M/L", "search_text": "off white hoodie", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
     {"name": "Gucci Pull M/L", "search_text": "gucci pull", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
     {"name": "Louis Vuitton Pull M/L", "search_text": "louis vuitton pull", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
-        # Cartes pokemon vintage
+       # Cartes pokemon vintage
     {"name": "Cartes pokemon vintage", "search_text": "cartes pokemon vintage", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
     {"name": "Carte pokemon ancienne", "search_text": "carte pokemon ancienne française", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
     # Lots de cartes anciennes
