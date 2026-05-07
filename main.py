@@ -20,25 +20,19 @@ VINTED_SEARCHES = [
     {"name": "Off-White Pull M/L", "search_text": "off white hoodie", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
     {"name": "Gucci Pull M/L", "search_text": "gucci pull", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
     {"name": "Louis Vuitton Pull M/L", "search_text": "louis vuitton pull", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
-    # Cartes Pokémon françaises 5€-50€
-        # Classeurs Pokémon
-    {"name": "Classeur Pokemon vintage", "search_text": "classeur pokemon vintage", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
-    {"name": "Album Pokemon complet", "search_text": "album pokemon complet", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
-    # 1ère édition (les plus rares)
-    {"name": "1ère édition holo", "search_text": "carte pokemon 1ere edition holo", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
-    {"name": "1ère édition française", "search_text": "pokemon 1ere edition française", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
-    # Cartes holographiques vintage 1999-2010
-    {"name": "Holo Base Set FR", "search_text": "dracaufeu holo français", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
-    {"name": "Mewtwo holo FR", "search_text": "mewtwo holo français", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
-    {"name": "Lugia holo Neo", "search_text": "lugia holo neo genesis", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
-    {"name": "Ronflex holo FR", "search_text": "ronflex holo français", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
-    {"name": "Artikodin holo FR", "search_text": "artikodin holo français", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
-    {"name": "Sulfura holo FR", "search_text": "sulfura holo français", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
-    {"name": "Électhor holo FR", "search_text": "electhor holo français", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
-    {"name": "Noctali holo FR", "search_text": "noctali holo français", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
-    {"name": "Carte vintage authentique", "search_text": "carte pokemon vintage authentique français", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
-    {"name": "Neo Genesis FR", "search_text": "neo genesis holo français", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
-    {"name": "Booster vintage scellé", "search_text": "booster pokemon vintage scellé", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
+        # Cartes pokemon vintage
+    {"name": "Cartes pokemon vintage", "search_text": "cartes pokemon vintage", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
+    {"name": "Carte pokemon ancienne", "search_text": "carte pokemon ancienne française", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
+    # Lots de cartes anciennes
+    {"name": "Lot cartes pokemon anciennes", "search_text": "lot cartes pokemon anciennes", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
+    {"name": "Lot pokemon vintage", "search_text": "lot pokemon vintage français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
+    # Classeurs
+    {"name": "Classeur carte pokemon", "search_text": "classeur carte pokemon", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
+    {"name": "Classeur pokemon complet", "search_text": "classeur pokemon complet français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
+    # Cartes brillantes
+    {"name": "Cartes pokemon brillantes", "search_text": "cartes pokemon brillantes", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
+    {"name": "Lot cartes brillantes", "search_text": "lot cartes brillantes pokemon", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
+    {"name": "Pokemon holo brillant", "search_text": "pokemon holo brillant français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
 
 
 BASE_URL = "https://www.vinted.fr/api/v2/catalog/items"
