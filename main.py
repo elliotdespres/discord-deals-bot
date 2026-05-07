@@ -11,20 +11,21 @@ CHANNELS = {
 }
 CHECK_INTERVAL = 60
 VINTED_SEARCHES = [
-    {"name": "Supreme", "search_text": "supreme", "price_from": 5, "price_to": 100, "category": "vetements"},
-    {"name": "Palace", "search_text": "palace", "price_from": 5, "price_to": 100, "category": "vetements"},
-    {"name": "Jordan 1", "search_text": "jordan 1", "price_from": 5, "price_to": 100, "category": "vetements"},
-    {"name": "Stone Island", "search_text": "stone island", "price_from": 5, "price_to": 100, "category": "vetements"},
-    {"name": "Moncler", "search_text": "moncler", "price_from": 5, "price_to": 100, "category": "vetements"},
-    {"name": "Balenciaga", "search_text": "balenciaga", "price_from": 5, "price_to": 100, "category": "vetements"},
-    {"name": "Off-White", "search_text": "off white", "price_from": 5, "price_to": 100, "category": "vetements"},
-    {"name": "Louis Vuitton", "search_text": "louis vuitton", "price_from": 5, "price_to": 100, "category": "vetements"},
-    {"name": "Gucci", "search_text": "gucci", "price_from": 5, "price_to": 100, "category": "vetements"},
-    {"name": "Carte Pokemon VF", "search_text": "carte pokemon vf", "price_from": 5, "price_to": 100, "category": "pokemon"},
-    {"name": "Carte Pokemon française", "search_text": "carte pokemon française", "price_from": 5, "price_to": 100, "category": "pokemon"},
-    {"name": "Booster Pokemon FR", "search_text": "booster pokemon francais", "price_from": 5, "price_to": 100, "category": "pokemon"},
-    {"name": "Dracaufeu holo", "search_text": "dracaufeu holo", "price_from": 5, "price_to": 100, "category": "pokemon"},
-    {"name": "Coffret Pokemon", "search_text": "coffret pokemon", "price_from": 5, "price_to": 100, "category": "pokemon"},
+    # Vêtements luxe taille M et L, pas de chaussures
+    {"name": "Supreme Pull M/L", "search_text": "supreme sweat", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
+    {"name": "Palace Pull M/L", "search_text": "palace pull", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
+    {"name": "Stone Island Pull M/L", "search_text": "stone island pull", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
+    {"name": "Moncler Pull M/L", "search_text": "moncler pull", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
+    {"name": "Balenciaga Pull M/L", "search_text": "balenciaga sweat", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
+    {"name": "Off-White Pull M/L", "search_text": "off white hoodie", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
+    {"name": "Gucci Pull M/L", "search_text": "gucci pull", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
+    {"name": "Louis Vuitton Pull M/L", "search_text": "louis vuitton pull", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
+    # Cartes Pokémon françaises 5€-50€
+    {"name": "Carte Pokemon VF", "search_text": "carte pokemon vf", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
+    {"name": "Carte Pokemon française", "search_text": "carte pokemon française", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
+    {"name": "Booster Pokemon FR", "search_text": "booster pokemon francais", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
+    {"name": "Dracaufeu holo", "search_text": "dracaufeu holo", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
+    {"name": "Coffret Pokemon", "search_text": "coffret pokemon", "price_from": 5, "price_to": 50, "category": "pokemon", "size_ids": []},
 ]
 
 BASE_URL = "https://www.vinted.fr/api/v2/catalog/items"
@@ -38,7 +39,6 @@ HEADERS = {
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
-
 intents = discord.Intents.default()
 bot = discord.Client(intents=intents)
 seen_ids: set[int] = set()
@@ -53,8 +53,12 @@ async def get_session_cookies(session):
         logger.warning("Cookies Vinted : %s", e)
 
 
-async def fetch_listings(session, search_text, price_from, price_to):
+async def fetch_listings(session, search_text, price_from, price_to, size_ids):
     params = {"search_text": search_text, "price_from": price_from, "price_to": price_to, "order": "newest_first", "per_page": 20, "page": 1, "country_ids[]": 1}
+    for sid in size_ids:
+        params.setdefault("size_ids[]", [])
+        if isinstance(params["size_ids[]"], list):
+            params["size_ids[]"].append(sid)
     try:
         async with session.get(BASE_URL, params=params, headers=HEADERS, timeout=aiohttp.ClientTimeout(total=10)) as resp:
             if resp.status == 403:
@@ -84,13 +88,22 @@ def make_embed(item, search_name):
     user = item.get("user", {})
     if user:
         embed.set_footer(text=f"Vendeur : {user.get('login', '?')} • Vinted")
+    size = item.get("size_title")
+    brand = item.get("brand_title")
+    if size or brand:
+        extras = []
+        if brand:
+            extras.append(f"Marque : {brand}")
+        if size:
+            extras.append(f"Taille : {size}")
+        embed.add_field(name="Détails", value="\n".join(extras), inline=False)
     return embed
 
 
 @tasks.loop(seconds=CHECK_INTERVAL)
 async def check_deals():
     for search in VINTED_SEARCHES:
-        items = await fetch_listings(http_session, search["search_text"], search["price_from"], search["price_to"])
+        items = await fetch_listings(http_session, search["search_text"], search["price_from"], search["price_to"], search.get("size_ids", []))
         channel = bot.get_channel(CHANNELS.get(search["category"]))
         if not channel:
             continue
