@@ -11,7 +11,6 @@ CHANNELS = {
 }
 CHECK_INTERVAL = 60
 VINTED_SEARCHES = [
-    # Vêtements luxe taille M et L, pas de chaussures
     {"name": "Supreme Pull M/L", "search_text": "supreme sweat", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
     {"name": "Palace Pull M/L", "search_text": "palace pull", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
     {"name": "Stone Island Pull M/L", "search_text": "stone island pull", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
@@ -20,20 +19,16 @@ VINTED_SEARCHES = [
     {"name": "Off-White Pull M/L", "search_text": "off white hoodie", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
     {"name": "Gucci Pull M/L", "search_text": "gucci pull", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
     {"name": "Louis Vuitton Pull M/L", "search_text": "louis vuitton pull", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
-       # Cartes pokemon vintage
     {"name": "Cartes pokemon vintage", "search_text": "cartes pokemon vintage", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
     {"name": "Carte pokemon ancienne", "search_text": "carte pokemon ancienne française", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
-    # Lots de cartes anciennes
     {"name": "Lot cartes pokemon anciennes", "search_text": "lot cartes pokemon anciennes", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
     {"name": "Lot pokemon vintage", "search_text": "lot pokemon vintage français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
-    # Classeurs
     {"name": "Classeur carte pokemon", "search_text": "classeur carte pokemon", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
     {"name": "Classeur pokemon complet", "search_text": "classeur pokemon complet français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
-    # Cartes brillantes
     {"name": "Cartes pokemon brillantes", "search_text": "cartes pokemon brillantes", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
     {"name": "Lot cartes brillantes", "search_text": "lot cartes brillantes pokemon", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
     {"name": "Pokemon holo brillant", "search_text": "pokemon holo brillant français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
-
+]
 
 BASE_URL = "https://www.vinted.fr/api/v2/catalog/items"
 HEADERS = {
