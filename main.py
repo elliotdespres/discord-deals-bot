@@ -19,13 +19,13 @@ VINTED_SEARCHES = [
     {"name": "Off-White Pull M/L", "search_text": "off white hoodie", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
     {"name": "Gucci Pull M/L", "search_text": "gucci pull", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
     {"name": "Louis Vuitton Pull M/L", "search_text": "louis vuitton pull", "price_from": 5, "price_to": 100, "category": "vetements", "size_ids": [208, 209]},
-        {"name": "Cartes pokemon vintage", "search_text": "cartes pokemon vintage 1999 2010", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
+    {"name": "Cartes pokemon vintage", "search_text": "cartes pokemon vintage français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
     {"name": "Carte pokemon ancienne", "search_text": "carte pokemon ancienne française", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
-    {"name": "Lot cartes pokemon anciennes", "search_text": "lot cartes pokemon anciennes", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
+    {"name": "Lot cartes pokemon anciennes", "search_text": "lot cartes pokemon anciennes français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
     {"name": "Lot pokemon vintage", "search_text": "lot pokemon vintage français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
-    {"name": "Classeur carte pokemon", "search_text": "classeur carte pokemon", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
-    {"name": "Classeur pokemon complet", "search_text": "classeur pokemon complet", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
-    {"name": "Lot cartes brillantes", "search_text": "lot cartes brillantes pokemon ancien", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
+    {"name": "Classeur carte pokemon", "search_text": "classeur carte pokemon français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
+    {"name": "Classeur pokemon complet", "search_text": "classeur pokemon complet français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
+    {"name": "Lot cartes brillantes", "search_text": "lot cartes brillantes pokemon français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
 
 ]
 
