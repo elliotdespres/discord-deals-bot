@@ -26,13 +26,9 @@ VINTED_SEARCHES = [
     {"name": "Classeur carte pokemon", "search_text": "classeur carte pokemon français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
     {"name": "Classeur pokemon complet", "search_text": "classeur pokemon complet français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
     {"name": "Lot cartes brillantes", "search_text": "lot cartes brillantes pokemon français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
-        {"name": "Cartes EX françaises", "search_text": "cartes pokemon ex français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
+    {"name": "Cartes EX françaises", "search_text": "cartes pokemon ex français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
     {"name": "Lot reverse holo FR", "search_text": "lot cartes reverse holo pokemon français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
     {"name": "Cartes Diamond Pearl FR", "search_text": "cartes pokemon diamant perle français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
-    {"name": "Lot cartes anciennes FR", "search_text": "lot cartes pokemon anciennes françaises", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
-    {"name": "Classeur pokemon ancien", "search_text": "classeur pokemon ancien français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
-    {"name": "Lot pokemon EX rare", "search_text": "lot pokemon ex rare français", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
-    {"name": "Cartes pokemon brillantes lot", "search_text": "lot cartes pokemon brillantes françaises", "price_from": 5, "price_to": 35, "category": "pokemon", "size_ids": []},
 
 
 ]
